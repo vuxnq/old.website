@@ -1,0 +1,181 @@
+/* CSS Mini Reset */
+html, body, div, form, fieldset, legend, label { margin: 0; padding: 0;  }
+table { border-collapse: collapse; border-spacing: 0; }
+th, td { text-align: left; vertical-align: top; }
+h1, h2, h3, h4, h5, h6, th, td, caption { font-weight:normal; }
+img { border: 0; }
+
+/* Fonts */
+@font-face {
+    font-family: Asset;
+    src: url("assets/font/Asset-Regular.ttf");
+}
+
+@font-face {
+    font-family: Montserrat-SemiBold;
+    src: url(assets/font/Montserrat-SemiBold.ttf);
+}
+
+@font-face {
+    font-family: Montserrat;
+    src: url(assets/font/Montserrat-Medium.ttf);
+}
+
+/* CSS Styles */
+.titlescreen {
+    height: 100vh;
+}
+body:before {
+    content: "";
+    display: block;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -10;
+    background: url(assets/images/twilight@3x.png) no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+body {
+    background-color: black;
+    color: white;
+    font-family: Montserrat;
+    font-size: 20px;
+}
+header {
+    z-index: 999;
+    background-color: rgba(0,0,0,.5);
+    backdrop-filter: blur(18px) saturate(3);
+    -webkit-backdrop-filter: blur(18px) saturate(3);
+    max-width: fit-content;
+    padding: 28px;
+    border-radius: 30px;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 25px;
+    margin-top: -54vh;
+    margin-bottom: 50vh;
+    margin-inline: auto;
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 0px 5px 8px rgba(0,0,0,.3);
+}
+
+main {
+    background-color: rgba(0,0,0,.5);
+    backdrop-filter: blur(18px) saturate(3);
+    -webkit-backdrop-filter: blur(18px) saturate(3);
+    border-radius: 60px;
+    padding: 28px;
+    margin-block: 28px;
+    box-shadow: 0px 5px 8px rgba(0,0,0,.3);
+}
+
+article {
+    margin: 28px;
+}
+
+footer {
+    background-color: rgba(0,0,0,.5);
+    backdrop-filter: blur(18px) saturate(3);
+    -webkit-backdrop-filter: blur(18px) saturate(3);
+    border-radius: 30px;
+    padding: 28px;
+    max-width: fit-content;
+    margin-block: 28px;
+    font-family: Montserrat-SemiBold;
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 0px 5px 8px rgba(0,0,0,.3);
+}
+
+section {
+    display: flex;
+    align-items:flex-start;
+    margin: 28px;
+}
+
+img {
+    border-radius: 24px;
+}
+
+a {
+    transition: 0.2s;
+    text-decoration: none;
+    color:white;
+}
+
+a.header {
+    color:white;
+    text-decoration: none;
+    font-family: Asset;
+    font-size: 28px;
+    height: 25px;
+    line-height: 25px;
+}
+
+a.header:active {
+    transition: 0.1s;
+    font-size: 24px;
+}
+
+a:hover {
+    color: #cfaedb;
+    text-shadow: 0px 0px 8px #cfaedb80;
+}
+
+button.article {
+    transition: 0.2s;
+    align-self: flex-end;
+    background-color: transparent;
+    color: white;
+    backdrop-filter: blur(18px) saturate(3);
+    -webkit-backdrop-filter: blur(18px) saturate(3);
+    border-radius: 20px;
+    padding: 20px;
+    max-width: fit-content;
+    font-family: Montserrat-SemiBold;
+    box-shadow: 0px 5px 8px rgba(0,0,0,.3);
+    border: none;
+    cursor: pointer;
+}
+
+.article:hover {
+    box-shadow: 0px 5px 16px rgba(0,0,0,.3);
+    transform: scale(1.2);
+}
+
+.article:active {
+    transition: 0.1s;
+    transform:  scale(0.8);
+    box-shadow: 0px 5px 8px rgba(0,0,0,.3);
+}
+
+.flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.socials {
+    width: 200px; display: flex;
+    justify-content: space-between;
+}
+
+.center {
+    display: grid;
+    place-content: center;
+}
+
+.wrapper {
+    max-width: 1440px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 5%;
+    padding-right: 5%;
+}
