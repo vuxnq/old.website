@@ -1,11 +1,3 @@
-/* CSS Mini Reset */
-html, body, div, form, fieldset, legend, label { margin: 0; padding: 0;  }
-table { border-collapse: collapse; border-spacing: 0; }
-th, td { text-align: left; vertical-align: top; }
-h1, h2, h3, h4, h5, h6, th, td, caption { font-weight:normal; }
-img { border: 0; }
-
-
 /* Fonts */
 @font-face {
     font-family: Asset;
@@ -26,21 +18,6 @@ img { border: 0; }
 .titlescreen {
     height: 100vh;
 }
-/*body:before {
-    content: "";
-    display: block;
-    position: fixed;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -10;
-    background: url(assets/images/twilight@3x.png) no-repeat center center;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-}*/
 
 body {
     background-color: #6F4C5B;
@@ -56,7 +33,7 @@ header {
     -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(5px);
     max-width: max-content;
-    padding: 16px;
+    padding: 20px;
     border-radius: 30px;
     position: -webkit-sticky;
     position: sticky;
@@ -104,13 +81,12 @@ article {
 
 footer {
     background-color: #6F4C5B;
-    border-radius: 30px;
-    padding: 28px;
+    border-radius: 25px;
     max-width: fit-content;
-    margin-block: 28px;
+    margin-block: 25px;
     font-family: Montserrat-SemiBold;
     display: flex;
-    justify-content: space-between;
+
 }
 
 section {
@@ -120,7 +96,7 @@ section {
 }
 
 img {
-    border-radius: 24px;
+    border-radius: 25px;
 }
 
 a {
@@ -134,7 +110,22 @@ a:hover {
     background-color: #DEBA9D;
 }
 
-button.article {
+ul.footer {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+li {
+    padding: 25px;
+}
+
+#copyright {
+    padding: 25px;
+}
+
+button {
     transition: 0.2s;
     align-self: flex-end;
     background-color: #9E7777;
@@ -148,13 +139,46 @@ button.article {
     cursor: pointer;
 }
 
-.article:hover {
+button:hover {
     transform: translateY(-5px);
     background-color: #DEBA9D;
     box-shadow: 0px 5px 0px #9E7777;
 }
 
-.article:active {
+button:active {
+    transition: 0.1s;
+    transform: translateY(3px);
+    background-color: #9E7777;
+    box-shadow: 0px -2px 0px #DEBA9D;
+    padding-bottom: 17px;
+    border-bottom: 3px solid #6F4C5B;
+}
+
+a.button {
+    -webkit-appearance: button;
+    -moz-appearance: button;
+    appearance: button;
+
+    transition: 0.2s;
+    align-self: flex-end;
+    background-color: #9E7777;
+    color: #F5E8C7;
+    border-radius: 20px;
+    padding: 20px;
+    max-width: fit-content;
+    font-size: 20px;
+    font-family: Montserrat-SemiBold;
+    border: none;
+    cursor: pointer;
+}
+
+a.button:hover {
+    transform: translateY(-5px);
+    background-color: #DEBA9D;
+    box-shadow: 0px 5px 0px #9E7777;
+}
+
+a.button:active {
     transition: 0.1s;
     transform: translateY(3px);
     background-color: #9E7777;
@@ -169,6 +193,10 @@ button.article {
     align-items: center;
 }
 
+.space {
+    word-spacing: 1vw;
+}
+
 .center {
     display: grid;
     place-content: center;
@@ -181,6 +209,7 @@ button.article {
     padding-left: 25%;
     padding-right: 25%;
 }
+
 
 
 /* Small Desktop Screen */
