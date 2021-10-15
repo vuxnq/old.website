@@ -14,14 +14,27 @@
     src: url(assets/font/Montserrat-Medium.ttf);
 }
 
+/* Animations */
+@keyframes arrow {
+    0% {color: transparent}
+    100% {color: #F8EDE3}
+}
+
 /* CSS Styles */
 .titlescreen {
-    height: 100vh;
+    color: transparent;
+    padding-top: 90vh;
+    padding-bottom: 10vh;
+    text-align: center;
+    animation-name: arrow;
+    animation-duration: 0.2s;
+    animation-delay: 2s;
+    animation-fill-mode: forwards;
 }
 
 body {
-    background-color: #6F4C5B;
-    color: #F5E8C7;
+    background-color: #798777;
+    color: #F8EDE3;
     font-family: Montserrat;
     font-size: 20px;
 }
@@ -29,7 +42,7 @@ body {
 /* Header */
 header {
     z-index: 999;
-    background-color: #6F4C5BAA;
+    background-color: #798777AA;
     -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(5px);
     max-width: max-content;
@@ -39,7 +52,7 @@ header {
     position: sticky;
     top: 25px;
     margin-top: -55vh;
-    margin-bottom: 50vh;
+    margin-bottom: 45vh;
     margin-inline: auto;
     display: flex;
 }
@@ -51,7 +64,7 @@ header {
 #item {
     padding: 10px;
     transition: 0.2s;
-    color:#F5E8C7;
+    color:#F8EDE3;
     text-decoration: none;
     font-family: Asset;
     font-size: 28px;
@@ -61,8 +74,8 @@ header {
 
 #item:hover {
     transform: scale(1.2);
-    color: #F5E8C7;
-    text-shadow: 0px 0px 10px #DEBA9D;
+    color: #F8EDE3;
+    text-shadow: 0px 0px 10px #BDD2B6;
 }
 
 header a:hover {
@@ -70,7 +83,7 @@ header a:hover {
 }
 
 main {
-    background-color: #6F4C5B;
+    background-color: #798777;
     border-radius: 60px;
     padding: 10px;
 }
@@ -80,7 +93,7 @@ article {
 }
 
 footer {
-    background-color: #6F4C5B;
+    background-color: #798777;
     border-radius: 25px;
     max-width: fit-content;
     margin-block: 25px;
@@ -97,17 +110,29 @@ section {
 
 img {
     border-radius: 25px;
+    border: solid 5px #A2B29F;
 }
 
 a {
     transition: 0.2s;
     text-decoration: none;
-    color:#F5E8C7;
+    color:#F8EDE3;
 }
 
 a:hover {
-    color: #F5E8C7;
-    background-color: #DEBA9D;
+    color: #F8EDE3;
+    background-color: #BDD2B6;
+}
+
+a.reset {
+    transition: 0.2s;
+    text-decoration: none;
+    color:#F8EDE3;
+}
+
+a.reset:hover {
+    color: #F8EDE3;
+    background-color: transparent;
 }
 
 ul.footer {
@@ -126,10 +151,15 @@ li {
 }
 
 button {
+    -webkit-appearance: button;
+    -moz-appearance: button;
+    appearance: button;
+
     transition: 0.2s;
+    position: relative;
     align-self: flex-end;
-    background-color: #9E7777;
-    color: #F5E8C7;
+    background-color: #A2B29F;
+    color: #F8EDE3;
     border-radius: 20px;
     padding: 20px;
     max-width: fit-content;
@@ -141,50 +171,15 @@ button {
 
 button:hover {
     transform: translateY(-5px);
-    background-color: #DEBA9D;
-    box-shadow: 0px 5px 0px #9E7777;
+    background-color: #BDD2B6;
+    box-shadow: 0px 5px #A2B29F;
 }
 
 button:active {
     transition: 0.1s;
     transform: translateY(3px);
-    background-color: #9E7777;
-    box-shadow: 0px -2px 0px #DEBA9D;
-    padding-bottom: 17px;
-    border-bottom: 3px solid #6F4C5B;
-}
-
-a.button {
-    -webkit-appearance: button;
-    -moz-appearance: button;
-    appearance: button;
-
-    transition: 0.2s;
-    align-self: flex-end;
-    background-color: #9E7777;
-    color: #F5E8C7;
-    border-radius: 20px;
-    padding: 20px;
-    max-width: fit-content;
-    font-size: 20px;
-    font-family: Montserrat-SemiBold;
-    border: none;
-    cursor: pointer;
-}
-
-a.button:hover {
-    transform: translateY(-5px);
-    background-color: #DEBA9D;
-    box-shadow: 0px 5px 0px #9E7777;
-}
-
-a.button:active {
-    transition: 0.1s;
-    transform: translateY(3px);
-    background-color: #9E7777;
-    box-shadow: 0px -2px 0px #DEBA9D;
-    padding-bottom: 17px;
-    border-bottom: 3px solid #6F4C5B;
+    background-color: #A2B29F;
+    box-shadow: 0px -3px #BDD2B6, inset 0px -3px #798777;
 }
 
 .flex {
@@ -223,6 +218,12 @@ a.button:active {
 
 /* Mobile Phones Portrait */
 @media screen and (max-width: 780px) {
+    .titlescreen {
+        padding-top: 80vh;
+        padding-bottom: 20vh;
+        text-align: center;
+    }
+
     .wrapper {
         max-width: 480px;
         margin-left: auto;
@@ -232,10 +233,20 @@ a.button:active {
     }
 
     header {
+        margin-top: -60vh;
+        margin-bottom: 40vh;
         display: block;
     }
 
     section {
         display: block;
+    }
+
+    ul.footer {
+        display: block;
+    }
+    li {
+        padding: 25px;
+        padding-block: 0px;
     }
 }
