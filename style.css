@@ -65,7 +65,6 @@ header.scroll {
     left: 50%;
     transform: translateX(-50%);
     background-color: #A2B29FAA;
-    box-shadow: 0px 5px 5px #A2B29F;
 }
 
 #stretch {
