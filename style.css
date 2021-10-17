@@ -1,3 +1,17 @@
+/* Variables */
+:root {
+    --color1: #F8EDE3;
+    --color2: #BDD2B6;
+    --color3: #A2B29F;
+    --color3opacity: #A2B29FAA;
+    --color4: #798777;
+    --color4opacity: #798777AA;
+
+    --font-header: Asset;
+    --font-text: Montserrat;
+    --font-text-bold: Montserrat-SemiBold;
+}
+
 /* Fonts */
 @font-face {
     font-family: Asset;
@@ -17,15 +31,21 @@
 /* Animations */
 @keyframes arrow {
     0% {color: transparent}
-    100% {color: #F8EDE3}
+    100% {color: var(--color1)}
 }
 
 /* CSS Styles */
+::selection {
+    color: var(--color4);
+    background-color: var(--color2);
+}
+
 .titlescreen {
     height: 100vh;
     display: grid;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
 }
 
 #arrow {
@@ -40,17 +60,18 @@
 }
 
 body {
-    background-color: #798777;
-    color: #F8EDE3;
-    font-family: Montserrat;
+    background-color: var(--color4);
+    color: var(--color1);
+    font-family: var(--font-text);
     font-size: 20px;
+    margin: 0px;
+    padding: 0px;
 }
 
-/* Header */
 header {
     z-index: 999;
     transition: all 0.2s, left 0s, transform 0s;
-    background-color: #798777AA;
+    background-color: var(--color4opacity);
     -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(5px);
     max-width: max-content;
@@ -64,7 +85,7 @@ header.scroll {
     top: 25px;
     left: 50%;
     transform: translateX(-50%);
-    background-color: #A2B29FAA;
+    background-color: var(--color3opacity);
 }
 
 #stretch {
@@ -74,9 +95,9 @@ header.scroll {
 #item {
     padding: 10px;
     transition: 0.2s;
-    color:#F8EDE3;
+    color: var(--color1);
     text-decoration: none;
-    font-family: Asset;
+    font-family: var(--font-header);
     font-size: 28px;
     height: 25px;
     line-height: 25px;
@@ -84,8 +105,8 @@ header.scroll {
 
 #item:hover {
     transform: scale(1.2);
-    color: #F8EDE3;
-    text-shadow: 0px 0px 10px #BDD2B6;
+    color: var(--color1);
+    text-shadow: 0px 0px 10px var(--color2);
 }
 
 header a:hover {
@@ -93,7 +114,7 @@ header a:hover {
 }
 
 main {
-    background-color: #798777;
+    background-color: var(--color4);
     border-radius: 60px;
     padding: 10px;
 }
@@ -103,11 +124,11 @@ article {
 }
 
 footer {
-    background-color: #798777;
+    background-color: var(--color4);
     border-radius: 25px;
     max-width: fit-content;
     margin-block: 25px;
-    font-family: Montserrat-SemiBold;
+    font-family: var(--font-text-bold);
     display: flex;
 
 }
@@ -120,28 +141,28 @@ section {
 
 img {
     border-radius: 25px;
-    border: solid 5px #A2B29F;
+    border: solid 5px var(--color3);
 }
 
 a {
     transition: 0.2s;
     text-decoration: none;
-    color:#F8EDE3;
+    color:var(--color1);
 }
 
 a:hover {
-    color: #F8EDE3;
-    background-color: #BDD2B6;
+    color: var(--color1);
+    background-color: var(--color2);
 }
 
 a.reset {
     transition: 0.2s;
     text-decoration: none;
-    color:#F8EDE3;
+    color:var(--color1);
 }
 
 a.reset:hover {
-    color: #F8EDE3;
+    color: var(--color1);
     background-color: transparent;
 }
 
@@ -168,28 +189,28 @@ button {
     transition: 0.2s;
     position: relative;
     align-self: flex-end;
-    background-color: #A2B29F;
-    color: #F8EDE3;
+    background-color: var(--color3);
+    color: var(--color1);
     border-radius: 20px;
     padding: 20px;
     max-width: fit-content;
     font-size: 20px;
-    font-family: Montserrat-SemiBold;
+    font-family: var(--font-text-bold);
     border: none;
     cursor: pointer;
 }
 
 button:hover {
     transform: translateY(-5px);
-    background-color: #BDD2B6;
-    box-shadow: 0px 5px #A2B29F;
+    background-color: var(--color2);
+    box-shadow: 0px 5px var(--color3);
 }
 
 button:active {
     transition: 0.1s;
     transform: translateY(3px);
-    background-color: #A2B29F;
-    box-shadow: 0px -3px #BDD2B6, inset 0px -3px #798777;
+    background-color: var(--color3);
+    box-shadow: 0px -3px var(--color2), inset 0px -3px var(--color4);
 }
 
 .flex {
