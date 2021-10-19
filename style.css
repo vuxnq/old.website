@@ -92,7 +92,7 @@ header.scroll {
     padding-inline: 20px;
 }
 
-#item {
+.item {
     padding: 10px;
     transition: 0.2s;
     color: var(--color1);
@@ -103,7 +103,7 @@ header.scroll {
     line-height: 25px;
 }
 
-#item:hover {
+.item:hover {
     transform: scale(1.2);
     color: var(--color1);
     text-shadow: 0px 0px 10px var(--color2);
