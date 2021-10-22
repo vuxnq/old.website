@@ -1,11 +1,12 @@
 /* Variables */
 :root {
-    --color1: #F8EDE3;
-    --color2: #BDD2B6;
-    --color3: #A2B29F;
-    --color3opacity: #A2B29FAA;
-    --color4: #798777;
-    --color4opacity: #798777AA;
+    --color1: #cad2c5;
+    --color2: #72BA82;
+    --color3: #428A78;
+    --color4: #2A565B;
+    --color4opacity: #2A565BAA;
+    --color5: #264150;
+    --color5opacity: #264150AA;
 
     --font-header: Asset;
     --font-text: Montserrat;
@@ -60,7 +61,7 @@
 }
 
 body {
-    background-color: var(--color4);
+    background-color: var(--color5);
     color: var(--color1);
     font-family: var(--font-text);
     font-size: 20px;
@@ -71,7 +72,6 @@ body {
 header {
     z-index: 999;
     transition: all 0.2s, left 0s, transform 0s;
-    background-color: var(--color4opacity);
     -webkit-backdrop-filter: blur(8px);
     backdrop-filter: blur(8px);
     max-width: max-content;
@@ -85,7 +85,7 @@ header.scroll {
     top: 25px;
     left: 50%;
     transform: translateX(-50%);
-    background-color: var(--color3opacity);
+    background-color: var(--color4opacity);
 }
 
 #stretch {
@@ -116,9 +116,9 @@ header a:hover {
 }
 
 main {
-    background-color: var(--color4);
-    border-radius: 60px;
-    padding: 10px;
+    background-color: var(--color4opacity);
+    border-radius: 35px;
+    padding: 1px;
 }
 
 article {
@@ -136,9 +136,11 @@ footer {
 }
 
 section {
+    background-color: var(--color4);
     display: flex;
     align-items:flex-start;
-    margin: 10px;
+    border-radius: 25px;
+    margin: 25px;
 }
 
 img {
@@ -154,7 +156,6 @@ a {
 }
 
 a:hover {
-    color: var(--color1);
     background-color: var(--color2);
     box-shadow: 0px 0px 10px var(--color2);
 }
@@ -162,12 +163,10 @@ a:hover {
 a.reset {
     transition: 0.2s;
     text-decoration: none;
-    color:var(--color1);
     box-shadow: 0px 0px 0px transparent;
 }
 
 a.reset:hover {
-    color: var(--color1);
     background-color: transparent;
 }
 
