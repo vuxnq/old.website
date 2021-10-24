@@ -1,1 +1,1 @@
-# vuxnq.me
+# [vuxnq.me](https://vuxnq.me)

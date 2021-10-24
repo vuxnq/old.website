@@ -8,7 +8,7 @@
   --color5: #121113;
   --color5opacity: #121113aa;
 
-  --font-header: Asset;
+  --font-title: Asset;
   --font-text: Montserrat;
   --font-text-bold: Montserrat-SemiBold;
 }
@@ -18,12 +18,10 @@
   font-family: Asset;
   src: url(assets/font/Asset-Regular.ttf);
 }
-
 @font-face {
   font-family: Montserrat-SemiBold;
   src: url(assets/font/Montserrat-SemiBold.ttf);
 }
-
 @font-face {
   font-family: Montserrat;
   src: url(assets/font/Montserrat-Medium.ttf);
@@ -60,6 +58,48 @@
   color: var(--color4);
   background-color: var(--color2);
   text-shadow: none;
+}
+
+h1 {
+  font-family: var(--font-text-bold);
+  font-size: 2em;
+  margin-top: 0.25em;
+  margin-bottom: 0.25em;
+}
+h2 {
+  font-family: var(--font-text-bold);
+  font-size: 1.5em;
+  margin-top: 0.25em;
+  margin-bottom: 0.25em;
+}
+h3 {
+  font-family: var(--font-text-bold);
+  font-size: 1.3em;
+  margin-top: 0.25em;
+  margin-bottom: 0.25em;
+}
+h4 {
+  font-family: var(--font-text-bold);
+  font-size: 1em;
+  margin-top: 0.25em;
+  margin-bottom: 0.25em;
+}
+h5 {
+  font-family: var(--font-text-bold);
+  font-size: 0.8em;
+  margin-top: 0.25em;
+  margin-bottom: 0.25em;
+}
+h6 {
+  font-family: var(--font-text-bold);
+  font-size: 0.7em;
+  margin-top: 0.25em;
+  margin-bottom: 0.25em;
+}
+
+p {
+  margin-top: 0.25em;
+  margin-bottom: 0.25em;
 }
 
 .titlescreen {
@@ -120,18 +160,34 @@ header.scroll {
   transition: 0.2s;
   color: var(--color1);
   text-decoration: none;
-  font-family: var(--font-header);
+  font-family: var(--font-title);
   font-size: 28px;
   height: 25px;
   line-height: 25px;
 }
-
 .item:hover {
   transform: scale(1.2);
   color: var(--color1);
   text-shadow: 0px 0px 10px var(--color1);
   background-color: transparent;
   box-shadow: 0px 0px 0px transparent;
+}
+.item:active {
+  transition: 0.1s ease;
+  transform: scale(.8);
+}
+
+.item#twitter:hover {
+  text-shadow: 0px 0px 10px #9bf6ff;
+}
+.item#youtube:hover {
+  text-shadow: 0px 0px 10px #ffadad;
+}
+.item#instagram:hover {
+  text-shadow: 0px 0px 10px #ffc6ff;
+}
+.item#github:hover {
+  text-shadow: 0px 0px 10px #caffbf;
 }
 
 header div {
@@ -150,8 +206,12 @@ main {
 
 article {
   text-align: center;
-  margin: auto;
+  margin-bottom: 25px;
   padding: 50px;
+  background-color: var(--color4);
+  box-shadow: 0px 5px 10px var(--color5opacity);
+  border: solid 10px var(--color4);
+  border-radius: 25px;
 }
 
 footer {
@@ -171,12 +231,6 @@ div.footer {
 }
 
 section {
-  background-color: var(--color4);
-  box-shadow: 0px 5px 10px var(--color5opacity);
-  border: solid 10px var(--color4);
-  border-radius: 25px;
-  display: flex;
-  align-items: flex-start;
   margin: 25px;
 }
 
@@ -214,11 +268,17 @@ a.reset:hover {
   background-color: transparent;
 }
 
+article a:not(.button) {
+  text-decoration: underline var(--color2);
+  -webkit-text-decoration: underline var(--color2);
+}
+
 ul.footer {
+  max-width: max-content;
   list-style: none;
-  padding: 0;
-  margin: 0;
+  margin: auto;
   display: flex;
+  padding: 0px;
 }
 
 li {
@@ -246,6 +306,8 @@ li {
   font-family: var(--font-text-bold);
   border: none;
   cursor: pointer;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
 }
 
 .button:hover {
@@ -270,14 +332,14 @@ li {
 }
 
 /* Topic Images */
-section#sweet-berries {
+article#sweet-berries {
   background-image: linear-gradient(var(--color5opacity), var(--color4)),
     url(assets/images/sweet-berries.png);
   background-size: cover;
   background-position: center;
 }
 
-section#kanye {
+article#kanye {
   background-image: linear-gradient(var(--color5opacity), var(--color4)),
     url(assets/images/kanye-sus.gif);
   background-size: cover;
