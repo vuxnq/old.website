@@ -311,7 +311,6 @@ li {
   transition: 0.2s;
   position: relative;
   background-color: var(--color3);
-  box-shadow: 0px 5px 10px var(--color5opacity);
   color: var(--color2);
   border-radius: 20px;
   padding: 20px;
@@ -328,7 +327,7 @@ li {
   transform: translateY(-5px);
   background-color: var(--color2);
   color: var(--color4);
-  box-shadow: 0px 0px 10px var(--color2), 0px 5px var(--color3);
+  box-shadow: 0px 0px 10px var(--color2), 0px 5px var(--color3),0px 5px 10px var(--color5);
 }
 
 .button:active {
@@ -336,7 +335,7 @@ li {
   transform: translateY(3px);
   background-color: var(--color3);
   color: var(--color2);
-  box-shadow: 0px -3px var(--color2), inset 0px -3px var(--color4);
+  box-shadow: 0px -3px var(--color2), inset 0px 0px 5px var(--color5opacity), inset 0px -3px var(--color4);
 }
 
 .wrapper {
