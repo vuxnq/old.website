@@ -10,7 +10,7 @@
 
   --font-title: Asset;
   --font-text: Montserrat;
-  --font-text-bold: Montserrat-SemiBold;
+  --font-text-bold: Outfit, Metropolis;
 }
 
 /* Fonts */
@@ -19,12 +19,16 @@
   src: url(assets/font/Asset-Regular.ttf);
 }
 @font-face {
-  font-family: Montserrat-SemiBold;
-  src: url(assets/font/Montserrat-SemiBold.ttf);
+  font-family: Outfit;
+  src: url(assets/font/Outfit-Bold.woff);
+}
+@font-face {
+  font-family: Metropolis;
+  src: url(assets/font/Metropolis-Bold.woff);
 }
 @font-face {
   font-family: Montserrat;
-  src: url(assets/font/Montserrat-Medium.ttf);
+  src: url(assets/font/Montserrat-SemiBold.ttf);
 }
 
 /* Animations */
@@ -54,6 +58,10 @@
 }
 
 /* CSS Styles */
+html {
+  scroll-behavior: smooth;
+}
+
 ::selection {
   color: var(--color4);
   background-color: var(--color2);
@@ -174,7 +182,7 @@ header.scroll {
 }
 .item:active {
   transition: 0.1s ease;
-  transform: scale(.8);
+  transform: scale(0.8);
 }
 
 .item#twitter:hover {
@@ -226,7 +234,7 @@ div.footer {
   border-radius: 25px;
   max-width: max-content;
   margin-block: 25px;
-  font-family: var(--font-text-bold);
+  font-family: var(--font-text);
   text-align: center;
 }
 
@@ -293,6 +301,12 @@ li {
   -webkit-appearance: button;
   -moz-appearance: button;
   appearance: button;
+
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 
   transition: 0.2s;
   position: relative;
