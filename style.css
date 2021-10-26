@@ -364,6 +364,11 @@ li {
   margin-right: auto;
 }
 
+#back {
+  margin-top: 85px;
+  margin-bottom: 25px;
+}
+
 /* Topic Images */
 article#sweet-berries {
   background-image: linear-gradient(var(--color5opacity), var(--color4)),
@@ -391,10 +396,26 @@ article#kanye {
     padding-left: 5%;
     padding-right: 5%;
   }
+
+  #back {
+    margin-top: 130px;
+  }
 }
 
 /* Mobile Phones Portrait */
 @media screen and (max-width: 780px) {
+  #cursor {
+    pointer-events: none;
+    z-index: 11;
+    position: fixed;
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    background-color: transparent;
+    opacity: 0.5;
+    transition: ease-out 0.25s;
+  }
+
   .wrapper {
     max-width: 480px;
 
@@ -441,5 +462,9 @@ article#kanye {
     -webkit-backdrop-filter: none;
     backdrop-filter: none;
     margin-block: 0px;
+  }
+
+  #back {
+    margin-top: 180px;
   }
 }
