@@ -22,6 +22,13 @@
     <script src="https://kit.fontawesome.com/fdd79f7c58.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
     <script src="script.js"></script>
+    <script>
+        fetch('https://api.kanye.rest/')
+            .then(res => res.json())
+            .then(data => {
+                document.getElementById('quote').innerHTML = '&quot'+data.quote+'&quot';
+            })
+    </script>
 
     <title>vuxnq</title>
 </head>
@@ -61,11 +68,10 @@
                 </article>
             </section>
             <section>
-                <h1>💣 idk</h1>
+                <h1>💣 Kanye</h1>
                 <article id="kanye">
-                    <h2>"I’m nice at ping pong"</h2>
+                    <h2 id="quote">"I’m nice at ping pong"</h2>
                     <p>-ye</p>
-                    <a class="button" href="https://twitter.com/kanyewest/status/989197113648037888" target="_blank"><i class="fas fa-arrow-right"></i></a>
                 </article>
             </section>
             <section id="links">
