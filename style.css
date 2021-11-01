@@ -383,6 +383,13 @@ article#kanye {
   background-position: center;
 }
 
+article#yeezus {
+  background-image: linear-gradient(var(--color5opacity), var(--color4)),
+  url(assets/images/yeezus.png);
+background-size: cover;
+background-position: center;
+}
+
 /* Small Desktop Screen */
 @media screen and (max-width: 1000px) {
   header {
